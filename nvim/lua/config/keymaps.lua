@@ -78,14 +78,6 @@ vim.keymap.set("n", "<leader>=", function()
   vim.fn.VSCodeNotify("workbench.action.evenEditorWidths")
 end, opts)
 
--- 下移動を「表示行単位」に変更
-vim.keymap.set("n", "j", "gj", opts)
-vim.keymap.set("n", "<Down>", "gj", opts)
-
--- 上移動を「表示行単位」に変更
-vim.keymap.set("n", "k", "gk", opts)
-vim.keymap.set("n", "<Up>", "gk", opts)
-
 -- 検索ハイライトを消す
 vim.keymap.set("n", "<Esc>", function()
   vim.cmd("nohlsearch")

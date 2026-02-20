@@ -10,3 +10,7 @@ vim.opt.incsearch = true
 vim.opt.ignorecase = true
 -- 大文字が含まれると区別する
 vim.opt.smartcase = true
+-- 長い行を折り返す
+vim.opt.wrap = true
+-- 単語単位で折り返す
+vim.opt.linebreak = true
