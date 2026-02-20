@@ -44,12 +44,12 @@ vim.keymap.set("n", "s", function()
 end, opts)
 
 -- エディタを左右に分割
-vim.keymap.set("n", "<leader><leader>s", function()
+vim.keymap.set("n", "<leader>s", function()
   vim.fn.VSCodeNotify("workbench.action.splitEditor")
 end, opts)
 
 -- エディタを上下に分割
-vim.keymap.set("n", "<leader><leader>v", function()
+vim.keymap.set("n", "<leader>v", function()
   vim.fn.VSCodeNotify("workbench.action.splitEditorDown")
 end, opts)
 
