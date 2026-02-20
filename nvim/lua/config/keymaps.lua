@@ -1,11 +1,11 @@
------------------------------------------------------------
--- NormalMode
------------------------------------------------------------
 -- オプション設定
 local opts = { noremap = true, silent = true }
 -- hop 読み込み
 local hop = require("hop")
 
+-----------------------------------------------------------
+-- NormalMode
+-----------------------------------------------------------
 -- 保存
 vim.keymap.set("n", "<leader>w", function()
   vim.fn.VSCodeNotify("workbench.action.files.save")
@@ -33,8 +33,13 @@ vim.keymap.set("n", "dd", "\"_dd", opts)
 -- 文字削除（ブラックホール）
 vim.keymap.set("n", "x", "\"_x", opts)
 
+-- 1文字ジャンプ
+vim.keymap.set("n", "S", function()
+  hop.hint_char1()
+end, opts)
+
 -- 2文字ジャンプ
-vim.keymap.set("n", "<leader>f", function()
+vim.keymap.set("n", "s", function()
   hop.hint_char2()
 end, opts)
 
