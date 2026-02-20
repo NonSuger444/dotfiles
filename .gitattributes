@@ -1,0 +1,3 @@
+# 改行コードをLFに統一
+# Windows / Mac / Linux 間でdotfilesを共有するための設定
+* text=auto eol=lf
