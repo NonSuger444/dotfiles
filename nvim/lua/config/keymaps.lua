@@ -116,6 +116,16 @@ vim.keymap.set("v", "<leader>h", "^", opts)
 -- 行末に移動
 vim.keymap.set("v", "<leader>l", "$", opts)
 
+-- 1文字ジャンプ
+vim.keymap.set("v", "S", function()
+  hop.hint_char1()
+end, opts)
+
+-- 2文字ジャンプ
+vim.keymap.set("v", "s", function()
+  hop.hint_char2()
+end, opts)
+
 -- 上書き貼り付け
 vim.keymap.set("v", "p", "\"_dP", opts)
 vim.keymap.set("v", "P", "\"_dP", opts)
