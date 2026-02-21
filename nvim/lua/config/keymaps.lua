@@ -88,6 +88,11 @@ vim.keymap.set("n", "<Esc>", function()
   vim.cmd("nohlsearch")
 end, opts)
 
+-- ターミナルにフォーカス
+vim.keymap.set("n", "<leader>t", function()
+  vim.fn.VSCodeNotify("workbench.action.terminal.focus")
+end, opts)
+
 -- init.lua を開く
 vim.keymap.set("n", "<leader><leader>vi", function()
   require("vscode").action("workbench.action.quickOpen", {
