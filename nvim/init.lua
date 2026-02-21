@@ -30,3 +30,5 @@ vim.g.mapleader = " "
 require("config.options")
 -- キーマップ設定
 require("config.keymaps")
+-- 自動コマンド設定
+require("config.autocmd")
