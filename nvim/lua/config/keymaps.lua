@@ -93,6 +93,12 @@ vim.keymap.set("n", "<leader>t", function()
   vim.fn.VSCodeNotify("workbench.action.terminal.focus")
 end, opts)
 
+-- 右インデント
+vim.keymap.set("n", "<Tab>", ">>", opts)
+
+-- 左インデント
+vim.keymap.set("n", "<S-Tab>", "<<", opts)
+
 -- init.lua を開く
 vim.keymap.set("n", "<leader><leader>vi", function()
   require("vscode").action("workbench.action.quickOpen", {
@@ -133,10 +139,10 @@ vim.keymap.set("v", "p", "\"_dP", opts)
 vim.keymap.set("v", "P", "\"_dP", opts)
 
 -- 右インデント後も選択維持
-vim.keymap.set("v", ">", ">gv", opts)
+vim.keymap.set("v", "<Tab>", ">gv", opts)
 
 -- 左インデント後も選択維持
-vim.keymap.set("v", "<", "<gv", opts)
+vim.keymap.set("v", "<S-Tab>", "<gv", opts)
 
 -- 削除（ブラックホール）
 vim.keymap.set("v", "d", "\"_d", opts)
