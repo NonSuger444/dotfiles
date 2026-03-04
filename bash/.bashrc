@@ -31,3 +31,15 @@ alias lt='ls -ltrh'
 #  -S: サイズ順
 #  -r: 逆順 (大きいものを末尾へ)
 alias lk='ls -lSrh'
+
+# ==========================================
+# 移動コマンド
+# ==========================================
+# Visual Studio Code ワークスペースのルートへ移動
+ws() {
+    if [ -n "$WSROOT" ]; then
+        cd "$WSROOT"
+    else
+        echo "WSROOT is not set."
+    fi
+}
