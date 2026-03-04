@@ -93,6 +93,11 @@ vim.keymap.set("n", "<leader>t", function()
   vim.fn.VSCodeNotify("workbench.action.terminal.focus")
 end, opts)
 
+-- エクスプローラーにフォーカス
+vim.keymap.set("n", "<leader>x", function()
+  vim.fn.VSCodeNotify("workbench.view.explorer")
+end, opts)
+
 -- 右インデント
 vim.keymap.set("n", "<Tab>", ">>", opts)
 
