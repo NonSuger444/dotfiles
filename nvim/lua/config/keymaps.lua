@@ -88,14 +88,19 @@ vim.keymap.set("n", "<Esc>", function()
   vim.cmd("nohlsearch")
 end, opts)
 
--- ターミナルにフォーカス
+-- ターミナル表示・非表示
 vim.keymap.set("n", "<leader>t", function()
-  vim.fn.VSCodeNotify("workbench.action.terminal.focus")
+  vim.fn.VSCodeNotify("workbench.action.togglePanel")
 end, opts)
 
 -- エクスプローラーにフォーカス
-vim.keymap.set("n", "<leader>x", function()
+vim.keymap.set("n", "<leader>e", function()
   vim.fn.VSCodeNotify("workbench.view.explorer")
+end, opts)
+
+-- エクスプローラー表示・非表示
+vim.keymap.set("n", "<leader><leader>e", function()
+  vim.fn.VSCodeNotify("workbench.action.toggleSidebarVisibility")
 end, opts)
 
 -- 右インデント
