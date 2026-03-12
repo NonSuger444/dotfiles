@@ -43,3 +43,18 @@ ws() {
         echo "WSROOT is not set."
     fi
 }
+
+# Downloadsディレクトリへ移動
+alias dl='cd ~/Downloads'
+
+# Screenshotsディレクトリへ移動
+alias ss='cd ~/Pictures/Screenshots'
+
+# ==========================================
+# エクスプローラー
+# ==========================================
+# カレントディレクトリをWindowsのエクスプローラーで開く
+alias e='explorer.exe .'
+
+# ごみ箱をWindowsのエクスプローラーで開く
+alias trash='explorer.exe shell:RecycleBinFolder'
