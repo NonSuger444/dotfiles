@@ -116,6 +116,11 @@ vim.keymap.set("n", "<leader><leader>vi", function()
   })
 end, opts)
 
+-- VSCodeの貼り付け
+vim.keymap.set("n", "<leader>p", function()
+  vim.fn.VSCodeNotify("editor.action.clipboardPasteAction")
+end, opts)
+
 -----------------------------------------------------------
 -- InsertMode
 -----------------------------------------------------------
